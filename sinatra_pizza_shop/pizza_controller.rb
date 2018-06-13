@@ -27,3 +27,11 @@ post('/pizza-orders') do
   @order.save()
   erb ( :create )
 end
+
+# DELETE
+post('/pizza-orders/:id/delete') do
+  pizza = PizzaOrder.find(params[:id].to_i)
+  pizza.delete()
+  redirect('/pizza-orders')
+  erb( :destroy )
+end
