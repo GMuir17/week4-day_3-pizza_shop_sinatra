@@ -1,5 +1,5 @@
 <form method="post" action="/pizza-orders/<%= @order.id() %>">
-  
+
   <label for="first-name">First Name:</label>
   <input id="first-name" type="text" name="first_name" value="<%= @order.first_name  %>"/>
 
@@ -8,7 +8,7 @@
 
   <label for="pizza-select">Select a pizza:</label>
   <select id="pizza-select" type="text" name="topping"/>
-    <option value="<%= @order.topping  %>"><%= @order.topping  %></option>
+    <option select hidden value="<%= @order.topping  %>"><%= @order.topping  %></option>
     <option value="Margherita">Margherita</option>
     <option value="Italian Sausage">Italian Sausage</option>
   </select>
