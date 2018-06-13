@@ -35,3 +35,7 @@ post('/pizza-orders/:id/delete') do
   redirect('/pizza-orders')
   erb( :destroy )
 end
+
+get('/pizza-orders/:id/edit') do
+  erb( :edit )
+end
