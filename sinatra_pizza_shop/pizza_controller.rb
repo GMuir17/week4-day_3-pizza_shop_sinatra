@@ -37,5 +37,6 @@ post('/pizza-orders/:id/delete') do
 end
 
 get('/pizza-orders/:id/edit') do
+  @order = PizzaOrder.find(params[:id].to_i)
   erb( :edit )
 end
